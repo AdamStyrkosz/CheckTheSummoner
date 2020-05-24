@@ -1,14 +1,17 @@
 <resources>
     <string name="app_name">Test_Slider</string>
-    <string name="planet_prompt">Choose a planet</string>
-    <string-array name="planets_array">
-        <item>EUNE</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+    <string name="region_prompt">Choose a region</string>
+    <string-array name="region_array">
+        <item>BR1</item>
+        <item>EUN1</item>
+        <item>EUW1</item>
+        <item>JP1</item>
+        <item>KR</item>
+        <item>LA1</item>
+        <item>LA2</item>
+        <item>NA1</item>
+        <item>OC 1</item>
+        <item>TR 1</item>
+        <item>RU</item>
     </string-array>
 </resources>

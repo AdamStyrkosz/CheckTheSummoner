@@ -21,7 +21,7 @@ public class championinfo{
                 name = "Cassiopeia";
                 break;
             case 136:
-                name = "Aurelion Sol";
+                name = "AurelionSol";
                 break;
             case 13:
                 name = "Ryze";
@@ -216,7 +216,7 @@ public class championinfo{
                 name = "Kalista";
                 break;
             case 36:
-                name = "Dr. Mundo";
+                name = "DrMundo";
                 break;
             case 427:
                 name = "Ivern";
@@ -354,7 +354,7 @@ public class championinfo{
                 name = "Miss Fortune";
                 break;
             case 62:
-                name = "Wukong";
+                name = "MonkeyKing";
                 break;
             case 53:
                 name = "Blitzcrank";

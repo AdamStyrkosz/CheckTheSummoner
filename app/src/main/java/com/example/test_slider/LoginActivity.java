@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         summonername = (EditText) findViewById(R.id.editText);
 
         spinner = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.planets_array, R.layout.support_simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.region_array, R.layout.support_simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
@@ -53,7 +53,6 @@ public class LoginActivity extends AppCompatActivity {
                         summonerinfo = output;
                     }
                 }).execute();
-
             }
         });
 

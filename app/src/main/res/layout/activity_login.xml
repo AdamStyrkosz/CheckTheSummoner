@@ -36,7 +36,7 @@
         android:id="@+id/spinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:prompt="@string/planet_prompt"
+        android:prompt="@string/region_prompt"
         android:layout_below="@id/buttoncont"
         />
 </RelativeLayout>

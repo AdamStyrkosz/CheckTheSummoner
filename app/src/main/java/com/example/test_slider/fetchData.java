@@ -1,8 +1,10 @@
 package com.example.test_slider;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -160,17 +162,16 @@ public class fetchData  extends AsyncTask<Void,Void,Summoner> {
     }
 
 
-
     @Override
     protected void onPostExecute(Summoner result) {
         delegate.processFinish(result);
         if(code==200) {
             LoginActivity.buttoncont.setVisibility(View.VISIBLE);
-            LoginActivity.summonername.setText("Pobrano dane!");
+            //LoginActivity.summonername.setText("Pobrano dane!");
         }
         else {
             LoginActivity.buttoncont.setVisibility(View.INVISIBLE);
-            LoginActivity.summonername.setText("Nie znaleziono!!!");
+            //LoginActivity.summonername.setText("Nie udało sie wyszukać");
         }
 
     }

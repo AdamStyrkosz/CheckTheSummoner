@@ -8,6 +8,30 @@ public class Summoner implements Serializable {
     private String name,level,iconID,SOLO_tier,SOLO_rank,SOLO_wins,SOLO_losses,FLEX_tier,FLEX_rank,FLEX_wins,FLEX_losses,SOLO_leaguePoints,FLEX_leaguePoints;
     private String masteryId_1,masteryId_2,masteryId_3,masteryPoints_1,masteryPoints_2,masteryPoints_3,masteryLevel_1,masteryLevel_2,masteryLevel_3;
 
+    public Summoner() {
+        this.name = "";
+        this.level = "";
+        this.iconID = "";
+        SOLO_tier = "";
+        SOLO_rank = "";
+        SOLO_wins = "";
+        SOLO_losses = "";
+        FLEX_tier = "";
+        FLEX_rank = "";
+        FLEX_wins = "";
+        FLEX_losses = "";
+        SOLO_leaguePoints = "";
+        FLEX_leaguePoints = "";
+        masteryId_1="0";
+        masteryId_2="0";
+        masteryId_3="0";
+        masteryLevel_1="0";
+        masteryLevel_2="0";
+        masteryLevel_3="0";
+        masteryPoints_1="0";
+        masteryPoints_2="0";
+        masteryPoints_3="0";
+    }
 
     public Summoner(String name, String level, String iconID, String solo_tier, String solo_rank, String solo_wins, String solo_losses, String flex_tier, String flex_rank, String flex_wins, String flex_losses, String solo_leaguePoints, String flex_leaguePoints) {
         this.name = name;
@@ -136,4 +160,5 @@ public class Summoner implements Serializable {
     public String getMasteryLevel_3() {
         return masteryLevel_3;
     }
+
 }

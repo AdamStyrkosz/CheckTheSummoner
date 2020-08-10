@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         String m2 = championinfo.translateIdtoName(Integer.parseInt(summonerinfo.getMasteryId_2()));
         String m3 = championinfo.translateIdtoName(Integer.parseInt(summonerinfo.getMasteryId_3()));
 
-        masteryname1.setText(m3);
-        masterypoints1.setText(summonerinfo.getMasteryPoints_3());
+        masteryname1.setText(m1);
+        masterypoints1.setText(summonerinfo.getMasteryPoints_1());
 
 
 

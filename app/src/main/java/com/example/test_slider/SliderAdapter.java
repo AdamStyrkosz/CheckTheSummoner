@@ -68,8 +68,6 @@ public class SliderAdapter extends PagerAdapter {
         text1.setText(firstline[position]);
         text2.setText(secondline[position]);
         slideImageView.setImageResource(icon[position]);
-
-
         progressBar.setProgress(progressdata[position]);
 
         container.addView(view);

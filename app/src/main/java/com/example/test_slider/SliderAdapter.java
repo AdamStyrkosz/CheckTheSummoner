@@ -21,6 +21,7 @@ public class SliderAdapter extends PagerAdapter {
     LayoutInflater layoutInflater;
     public Summoner summonerinfo;
 
+
     public SliderAdapter(Context context,Summoner s){
         summonerinfo = s;
         this.context = context;
@@ -30,6 +31,11 @@ public class SliderAdapter extends PagerAdapter {
     public String[] slider_headings = {
             "1",
             "2"
+    };
+
+    public String[] slider_queue = {
+            "RANKED SOLO-DUO",
+            "RANKED FLEX"
     };
 
 
@@ -55,6 +61,7 @@ public class SliderAdapter extends PagerAdapter {
         TextView text2 = (TextView) view.findViewById(R.id.text2);
         ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         progressBar.setMax(100);
+        TextView queue = (TextView) view.findViewById(R.id.queue);
 
         String iconID = summonerinfo.getIconID();
         String[] firstline = {summonerinfo.getSOLO_tier() + " " + summonerinfo.getSOLO_rank(),summonerinfo.getFLEX_tier() + " "+ summonerinfo.getFLEX_rank()};
@@ -67,6 +74,7 @@ public class SliderAdapter extends PagerAdapter {
 
         text1.setText(firstline[position]);
         text2.setText(secondline[position]);
+        queue.setText(slider_queue[position]);
         slideImageView.setImageResource(icon[position]);
         progressBar.setProgress(progressdata[position]);
 

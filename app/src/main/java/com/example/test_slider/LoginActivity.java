@@ -31,11 +31,12 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.loginodjuli);
 
         login = (Button) findViewById(R.id.login);
         buttoncont = (Button) findViewById(R.id.buttoncont);
         summonername = (EditText) findViewById(R.id.editText);
+        summonername.setText("Nahajek");
 
         spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.region_array, R.layout.support_simple_spinner_dropdown_item);

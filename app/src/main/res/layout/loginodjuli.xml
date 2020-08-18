@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tlo"
+    tools:context=".LoginActivity"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="380dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"
+        android:fontFamily="@font/frizquadrata"
+        android:text="CHECK THE SUMMONER"
+        android:textColor="#C1AD78"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="270dp"
+        android:fontFamily="@font/frizquadrata"
+        android:text="Choose Region"
+        android:textColor="#C1AD78"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="305dp"
+        android:spinnerMode="dialog"
+        android:background="@drawable/rounded_corners"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="355dp"
+        android:fontFamily="@font/frizquadrata"
+        android:text="Summoner"
+        android:textColor="#C1AD78"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="390dp"
+        android:autofillHints="username"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#C1AD78"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="442dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/frizquadrata"
+        android:text="Search"
+        android:visibility="visible"
+        android:textColor="#C1AD78" />
+
+    <Button
+        android:id="@+id/buttoncont"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="515dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/frizquadrata"
+        android:text="Continue"
+        android:textColor="#C1AD78"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+
+</RelativeLayout>

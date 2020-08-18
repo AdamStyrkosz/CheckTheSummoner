@@ -167,11 +167,11 @@ public class fetchData  extends AsyncTask<Void,Void,Summoner> {
         delegate.processFinish(result);
         if(code==200) {
             LoginActivity.buttoncont.setVisibility(View.VISIBLE);
-            //LoginActivity.summonername.setText("Pobrano dane!");
+            LoginActivity.login.setText("Search again");
         }
         else {
             LoginActivity.buttoncont.setVisibility(View.INVISIBLE);
-            //LoginActivity.summonername.setText("Nie udało sie wyszukać");
+            LoginActivity.login.setText("Incorrect nickname");
         }
 
     }

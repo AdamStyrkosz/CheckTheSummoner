@@ -48,8 +48,9 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String region = spinner.getSelectedItem().toString();
                 summonerinfo = new Summoner();
-                fetchData fetchData = (com.example.test_slider.fetchData) new fetchData(summonername.getText().toString(), API_KEY, new fetchData.AsyncResponse() {
+                fetchData fetchData = (com.example.test_slider.fetchData) new fetchData(summonername.getText().toString(), API_KEY,region, new fetchData.AsyncResponse() {
                     @Override
                     public void processFinish(Summoner output) {
                         summonerinfo = output;

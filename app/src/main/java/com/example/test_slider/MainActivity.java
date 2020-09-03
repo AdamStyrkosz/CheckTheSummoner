@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     public static String API_KEY="?api_key=RGAPI-3dcb8f7e-ba24-4999-92d5-b1a7eb79df20";
 
 
+
+    //onCreate => setFields
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

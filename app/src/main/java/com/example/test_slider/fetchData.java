@@ -35,11 +35,15 @@ public class fetchData  extends AsyncTask<Void,Void,Summoner> {
     String data = "[";
     Summoner summoner;
 
+    //do testow na stale eun1
+    String region = "eun1";
+
 
     int code;
 
-    public fetchData(String s,String api,AsyncResponse delegate){
+    public fetchData(String s,String api,String regionx,AsyncResponse delegate){
         this.delegate = delegate;
+        this.region = regionx;
         sumname = s;
         api_key = api;
     }
@@ -49,9 +53,8 @@ public class fetchData  extends AsyncTask<Void,Void,Summoner> {
     @Override
     protected Summoner doInBackground(Void... voids) {
 
-
         try {
-            URL url = new URL ("https://eun1.api.riotgames.com/lol/summoner/v4/summoners/by-name/"+sumname+api_key);
+            URL url = new URL ("https://"+region+".api.riotgames.com/lol/summoner/v4/summoners/by-name/"+sumname+api_key);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             code = httpURLConnection.getResponseCode();
             InputStream inputStream = httpURLConnection.getInputStream();
@@ -63,8 +66,6 @@ public class fetchData  extends AsyncTask<Void,Void,Summoner> {
             }
             data = data.substring(0,data.length()-4);
             data = data+ "]";
-
-
             JSONArray JD = new JSONArray(data);
             for(int i = 0;i<= JD.length();i++){
                 JSONObject JO = (JSONObject) JD.get(i);
@@ -88,7 +89,7 @@ public class fetchData  extends AsyncTask<Void,Void,Summoner> {
             String data2 = "";
             URL url2 = null;
             try {
-                url2 = new URL("https://eun1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + mainList.get(0).get("encryptedSumID") + api_key);
+                url2 = new URL("https://"+region+".api.riotgames.com/lol/league/v4/entries/by-summoner/" + mainList.get(0).get("encryptedSumID") + api_key);
                 HttpURLConnection httpURLConnection2 = (HttpURLConnection) url2.openConnection();
                 code = httpURLConnection2.getResponseCode();
                 InputStream inputStream2 = httpURLConnection2.getInputStream();
@@ -122,13 +123,10 @@ public class fetchData  extends AsyncTask<Void,Void,Summoner> {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-
-
                 try {
 
                     String data3 = "";
-                    URL url3 = new URL("https://eun1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/" + mainList.get(0).get("encryptedSumID") + api_key);
+                    URL url3 = new URL("https://"+region+".api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/" + mainList.get(0).get("encryptedSumID") + api_key);
                     HttpURLConnection httpURLConnection3 = (HttpURLConnection) url3.openConnection();
                     InputStream inputStream3 = httpURLConnection3.getInputStream();
                     BufferedReader bufferedReader3 = new BufferedReader(new InputStreamReader(inputStream3));

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView nickname,level,mastery1text,mastery2text,mastery3text;
 
 
-    public static String API_KEY="?api_key=RGAPI-3dcb8f7e-ba24-4999-92d5-b1a7eb79df20";
+    public static String API_KEY="?api_key=xxx";
 
 
 
